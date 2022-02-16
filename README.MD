@@ -71,7 +71,17 @@ If the protocol is icmp then command is
 
 ## 13.What are PCAP (PEE-cap) files?
 
-    tcpdump port 80 -w capture_file.pcap
+- ### It’s often useful to save packet captures into a file for analysis in the future. These files are known as PCAP (PEE-cap) files, and they can be processed by hundreds of different applications, including network analyzers, intrusion detection systems, and of course by tcpdump itself. Here we’re writing to a file called capture_file using the -w switch.
+
+  `tcpdump port 80 -w capture_file.pcap`
+
+## 14.How are PCAP files processed and why is it so?
+
+`tcpdump -r capture_file.pcap`
+
+## 15.Which switch is used to write the PCAP file called capture_file?
+
+- ### You can read PCAP files by using the -r switch. Note that you can use all the regular commands within tcpdump while reading in a file; you’re only limited by the fact that you can’t capture and process what doesn’t exist in the file already.
 
 ### Reference:
 
